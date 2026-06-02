@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        color: #444444;
+        background-color: #FFF8FA;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #FFE4E9;
+        border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #FFB6C1;
+        border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #FF9AAE;
+    }
+}
+
+@layer components {
+    .btn-pink {
+        @apply inline-flex items-center justify-center px-6 py-2.5 bg-gradient-to-r from-pink-300 to-pink-400 text-white font-medium rounded-full shadow-cute hover:shadow-cute-hover hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-offset-2;
+    }
+    .btn-pink-outline {
+        @apply inline-flex items-center justify-center px-6 py-2.5 border-2 border-pink-300 text-pink-500 font-medium rounded-full hover:bg-pink-50 hover:scale-105 transition-all duration-300 ease-in-out;
+    }
+    .card-cute {
+        @apply bg-white rounded-2xl shadow-cute p-6 hover:shadow-cute-hover transition-all duration-300;
+    }
+    .input-cute {
+        @apply w-full px-4 py-3 border border-pink-200 rounded-xl bg-white text-her-text placeholder-her-text-light focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-pink-300 transition-all duration-200;
+    }
+    .emoji-btn {
+        @apply text-3xl p-3 rounded-2xl bg-pink-50 hover:bg-pink-100 hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer border-2 border-transparent;
+    }
+    .emoji-btn.active {
+        @apply border-pink-400 bg-pink-100 shadow-cute scale-110;
+    }
+    .nav-link {
+        @apply flex items-center gap-2 px-4 py-2.5 text-her-text rounded-xl hover:bg-pink-50 hover:text-pink-600 transition-all duration-200 font-medium;
+    }
+    .nav-link.active {
+        @apply bg-pink-100 text-pink-600;
+    }
+}
